@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option java_package = "org.ctoader.medium";
+option java_outer_classname = "Reddit";
+
+message Comment {
+    int64 created_utc = 1;
+    int32 ups = 2;
+    string subreddit_id = 3;
+    string link_id = 4;
+    string name = 5;
+    int32 score_hidden = 6;
+    string author_flair_css_clas = 7;
+    string author_flair_text = 8;
+    string subreddit = 9;
+    string id = 10;
+    string removal_reason = 11;
+    int32 gilded = 12;
+    int32 downs = 13;
+    int32 archived = 14;
+    string author = 15;
+    int32 score = 16;
+    int32 retrieved_on = 17;
+    string body = 18;
+    string distinguished = 19;
+    int32 edited = 20;
+    int32 controversiality = 21;
+    string parent_id = 22;
+}
