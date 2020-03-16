@@ -1,0 +1,28 @@
+{"namespace": "org.ctoader.medium.model",
+ "type": "record",
+ "name": "AvroRedditComment",
+ "fields": [
+     {"name": "created_utc", "type": ["null", "long"], "default": null, "default": null},
+     {"name": "ups", "type": ["null", "int"], "default": null},
+     {"name": "subreddit_id", "type": ["null", "string"], "default": null},
+     {"name": "link_id", "type": ["null", "string"], "default": null},
+     {"name": "name", "type": ["null", "string"], "default": null},
+     {"name": "score_hidden", "type": ["null", "int"], "default": null},
+     {"name": "author_flair_css_class", "type": ["null", "string"], "default": null},
+     {"name": "author_flair_text", "type": ["null", "string"], "default": null},
+     {"name": "subreddit", "type": ["null", "string"], "default": null},
+     {"name": "id", "type": ["null", "string"], "default": null},
+     {"name": "removal_reason", "type": ["null", "string"], "default": null},
+     {"name": "gilded", "type": ["null", "int"], "default": null},
+     {"name": "downs", "type": ["null", "int"], "default": null},
+     {"name": "archived", "type": ["null", "int"], "default": null},
+     {"name": "author", "type": ["null", "string"], "default": null},
+     {"name": "score", "type": ["null", "int"], "default": null},
+     {"name": "retrieved_on", "type": ["null", "int"], "default": null},
+     {"name": "body", "type": ["null", "string"], "default": null},
+     {"name": "distinguished", "type": ["null", "string"], "default": null},
+     {"name": "edited", "type": ["null", "int"], "default": null},
+     {"name": "controversiality", "type": ["null", "int"], "default": null},
+     {"name": "parent_id", "type": ["null", "string"], "default": null}
+ ], "default": null
+}

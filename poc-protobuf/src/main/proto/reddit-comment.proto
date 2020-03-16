@@ -10,7 +10,7 @@ message Comment {
     string link_id = 4;
     string name = 5;
     int32 score_hidden = 6;
-    string author_flair_css_clas = 7;
+    string author_flair_css_class = 7;
     string author_flair_text = 8;
     string subreddit = 9;
     string id = 10;
