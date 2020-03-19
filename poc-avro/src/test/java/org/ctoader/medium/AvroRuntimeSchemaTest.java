@@ -32,7 +32,7 @@ public class AvroRuntimeSchemaTest {
 
         // Serialize user1 and user2 to disk
         File file = File.createTempFile("avro-user", null);
-        ;
+
         DatumWriter<GenericRecord> datumWriter = new GenericDatumWriter<>(schema);
         try (DataFileWriter<GenericRecord> dataFileWriter = new DataFileWriter<>(datumWriter)) {
             dataFileWriter.create(schema, file);
@@ -68,5 +68,22 @@ public class AvroRuntimeSchemaTest {
         }
 
         Assert.assertEquals(2, entriesCount);
+    }
+
+    @Test(expected = DataFileWriter.AppendWriteException.class)
+    public void testFieldsOptionality() throws IOException {
+        Schema schema = new Schema.Parser().parse(new File("src/test/resources/schema/user.avsc"));
+
+        GenericRecord user1 = new GenericData.Record(schema);
+//        user1.put("name", "Cristian");
+        user1.put("favorite_number", 2);
+
+        File file = File.createTempFile("avro-user", null);
+        DatumWriter<GenericRecord> datumWriter = new GenericDatumWriter<>(schema);
+        try (DataFileWriter<GenericRecord> dataFileWriter = new DataFileWriter<>(datumWriter)) {
+            dataFileWriter.create(schema, file);
+            dataFileWriter.append(user1);
+            dataFileWriter.flush();
+        }
     }
 }

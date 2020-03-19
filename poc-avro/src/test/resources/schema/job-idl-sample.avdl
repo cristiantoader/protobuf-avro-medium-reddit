@@ -1,0 +1,11 @@
+@namespace("mynamespace")
+protocol Sample {
+
+  record Job {
+    string jobid;
+    date submitDate;
+    time_ms submitTime;
+    timestamp_ms finishTime;
+    decimal(9,2) finishRatio;
+  }
+}
