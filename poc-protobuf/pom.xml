@@ -12,7 +12,7 @@
     <artifactId>protobuf-exporter</artifactId>
 
     <properties>
-        <protobuf-java.version>3.11.4</protobuf-java.version>
+        <protobuf-java.version>3.16.3</protobuf-java.version>
         <protobuf-maven-plugin.version>0.6.1</protobuf-maven-plugin.version>
         <os-maven-plugin.version>1.6.2</os-maven-plugin.version>
         <modelmapper.version>2.3.6</modelmapper.version>
